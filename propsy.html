@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Pierwszy komponent w React.js</title>
+  <script src="https://unpkg.com/react/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone/babel.js"></script>
+</head>
+
+<body>
+  <div id="app"></div>
+  <script type="text/babel">
+     function MojKomponent({title = "Modal", content}) // można podać domyślne wartości propsow
+     {
+  return (
+    <div>
+      <dialog open>
+        <h1>{title}</h1>
+        <p>{content}</p>
+        <footer><a href="https://typeofweb.com">Tak!</a></footer>
+      </dialog>
+    </div>
+  );
+}
+
+
+ReactDOM.render(
+  		<MojKomponent 
+              title="I co, duma?"
+              content={5+5}  //"To było prostsze niż by się mogło wydawać, prawda?"
+              />,
+  document.getElementById('app')
+);
+  </script>
+</body>
+
+</html>
