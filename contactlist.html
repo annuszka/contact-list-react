@@ -14,6 +14,10 @@
 <body>
 <div id="app"></div>
   <script type="text/babel">
+    function onClickHandler()
+    {
+      alert('Kliknieto!')
+    }
     class AppHeader extends React.Component
     {
       render()
@@ -26,7 +30,7 @@
                 Lista kontaktów
               </a>
               <div className="header item">
-                <button className="ui button">Dodaj</button>
+                <button className="ui button" onClick={onClickHandler}>Dodaj</button>
               </div>
             </nav>
           </header>
